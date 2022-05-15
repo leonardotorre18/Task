@@ -12,13 +12,29 @@ const showTask = () => {
     const data = []
     cursor.addEventListener("success", ()=> {
         if (cursor.result) {
-            data.push(cursor.result.value)
+            // data.push(cursor.result.value)
+
+            data.push({
+                id: cursor.result.key,
+                name: cursor.result.value.name,
+                description: cursor.result.value.description
+            })
             cursor.result.continue();
         }else{
             handleDOM.render(data);
+            console.log(data)
         }
     })
     
+}
+const addTask = data =>{
+    const transaction = DBConnet.transaction('task', "readwrite").objectStore('task')
+    transaction.add(data)
+}
+const deleteTask = (id) => {
+    const transaction = DBConnet.transaction('task', "readwrite").objectStore('task')
+    transaction.delete(id)
+    showTask();
 }
 
 // Connection with indexdDb
@@ -33,14 +49,6 @@ DBRequest.addEventListener('success', ()=>{
     DBConnet = DBRequest.result;
     showTask();
 })
-
-
-
-
-const addTask = data =>{
-    const transaction = DBConnet.transaction('task', "readwrite").objectStore('task')
-    transaction.add(data)
-}
 
 
 document.getElementById('form').addEventListener('submit', e => {

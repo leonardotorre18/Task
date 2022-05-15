@@ -5,7 +5,7 @@ class HandleDOM {
     }
 
  
-    createStructure (name, content){
+    createStructure (name, content, id){
         const task = document.createElement('div');
         const body = document.createElement('div');
         const title = document.createElement('h3');
@@ -22,6 +22,7 @@ class HandleDOM {
         description.innerHTML = content;
 
         button.classList.add('deleteButton');
+        button.setAttribute('onclick', 'deleteTask('+ id +')')
         button.innerHTML = "Eliminar";
 
         body.appendChild(title);
@@ -36,8 +37,10 @@ class HandleDOM {
     render(data) {
         this.container.innerHTML = '';
         const fragment = document.createDocumentFragment();
+
+        
         data.forEach(d => {
-            fragment.appendChild(this.createStructure(d.name, d.description));
+            fragment.appendChild(this.createStructure(d.name, d.description, d.id));
         });
         this.container.appendChild(fragment)
         
