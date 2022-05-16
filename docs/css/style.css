@@ -24,7 +24,7 @@ form.form textarea {
     font-size: 1.5em;
     padding: 5px;
     margin: 10px 0;
-    background: none;
+    background-color: rgb(27, 27, 27);
     color: #fff;
 
 }
