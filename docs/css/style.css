@@ -22,9 +22,11 @@ form.form {
 form.form input,
 form.form textarea {
     font-size: 1.5em;
-    color: rgb(27, 27, 27);
     padding: 5px;
     margin: 10px 0;
+    background: none;
+    color: #fff;
+
 }
 form.form input[type="text"]#name {
     width: 80%;
