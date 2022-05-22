@@ -7,13 +7,11 @@ class HandleDOM {
  
     createStructure (name, content, id){
         const task = document.createElement('div');
-        const body = document.createElement('div');
         const title = document.createElement('h3');
         const description = document.createElement('p');
         const button = document.createElement('button');
 
         task.classList.add('task');
-        body.classList.add('body');
 
         title.classList.add('title');
         title.innerHTML = name;
@@ -21,14 +19,13 @@ class HandleDOM {
         description.classList.add('description');
         description.innerHTML = content;
 
-        button.classList.add('deleteButton');
+        button.classList.add('delete');
         button.setAttribute('onclick', 'deleteTask('+ id +')')
         button.innerHTML = "Eliminar";
 
-        body.appendChild(title);
-        body.appendChild(description);
+        task.appendChild(title);
+        task.appendChild(description);
 
-        task.appendChild(body);
         task.appendChild(button);
 
         return task;
@@ -47,22 +44,3 @@ class HandleDOM {
     }
 
 }
-
-
-class Persona{
-    nombre
-    edad
-    soltero
-
-    constructor(nombre, edad, soltero){
-        this.nombre = nombre
-        this.edad = edad
-        this.soltero = soltero
-
-    }
-
-    saludar(saludo){
-        console.log(saludo)
-    }
-}
-

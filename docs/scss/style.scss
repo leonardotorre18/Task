@@ -1,14 +1,16 @@
 @import './components/mixis';
 
-$background-color: rgb(240, 240, 240);
-$main-color: rgb(242,151,36);
-$main-color-dark: rgb(212, 131, 32);
+$background-color: rgb(250, 250, 250);
+$font-color: rgba(0, 0, 0, .8);
+$main-color: #66D7D1;
+$main-color-dark: #4bbeb9;
 $second-color: #f23c3c;
 $second-color-dark: #d13232;
-$white-color: rgb(247, 244, 244);
-$black-color: rgba(0, 0, 0, 0.5);
-$font-color: rgba(0, 0, 0, .8);
+$white-color: rgb(250, 250, 250);
+$black-color: rgba(0, 0, 0, 0.4);
 $main-font: Grithani;
+
+$small-screen: 576px;
 
 @font-face {
     font-family: Grithani; 
@@ -19,7 +21,7 @@ $main-font: Grithani;
     box-sizing: border-box;
     padding: 0;  
     margin: 0;
-    font-family: sans-serif;
+    font-family: sans-serif; 
 }
 html {
     font-size: 20px;
@@ -27,12 +29,20 @@ html {
 body { 
     background-color: $background-color; 
     color: $font-color; 
+    width: 100%;
 }
 button, input, textarea {
     outline: none;
+    resize: none;
+}
+
+section.section {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 1rem;
 }
  
 
-@import './components/header';  
+// @import './components/header';  
 @import './components/form'; 
-@import './components/otros'; 
+@import './components/tasks'; 
