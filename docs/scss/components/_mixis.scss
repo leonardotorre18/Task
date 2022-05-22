@@ -1,0 +1,13 @@
+@mixin button ($firts-color, $second-color, $font-color) {
+    background-color: #{$firts-color};
+    border: none;
+    color: #{$font-color};
+    border-radius: 5px;
+    padding: .6rem .5rem;
+    font-size: .9rem;
+    transition: all .2s ease-in;
+    &:hover {
+        transition-delay: .2s;
+        background-color: #{$second-color};
+    }
+}

@@ -1,0 +1,20 @@
+header.header {
+    background-color: $main-color;
+    // box-shadow: 0px 0px 5px .5px $main-color; 
+    nav.nav {
+        ul.list {
+            display: flex;
+            list-style: none ;
+            width: 100%;
+            justify-content: center;
+            li {
+                margin: 7px 15px;
+                font-family: Grithani;
+                font-size: 1.8rem;
+                letter-spacing: .05rem;
+                color: $font-color;
+            } 
+
+        }
+    }
+}

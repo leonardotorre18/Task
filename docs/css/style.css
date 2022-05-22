@@ -1,87 +1,105 @@
-*,*::after,*::before {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-}
-button, input, textarea {
-    outline: none;
-}
+@font-face {
+  font-family: Grithani;
+  src: url("/docs/font/Grithani.otf"); }
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif; }
+
+html {
+  font-size: 20px; }
+
 body {
-    background-color: #fff; 
-    color: rgb(27, 27, 27);
-    
-}
+  background-color: #f0f0f0;
+  color: rgba(0, 0, 0, 0.8); }
+
+button, input, textarea {
+  outline: none; }
+
+header.header {
+  background-color: #f29724; }
+  header.header nav.nav ul.list {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center; }
+    header.header nav.nav ul.list li {
+      margin: 7px 15px;
+      font-family: Grithani;
+      font-size: 1.8rem;
+      letter-spacing: .05rem;
+      color: rgba(0, 0, 0, 0.8); }
+
+section {
+  width: 100%; }
 
 form.form {
-    width: 100%;
-    padding: 3em;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-form.form input,
-form.form textarea {
-    font-size: 1.5em;
-    padding: 5px;
+  width: 100%;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  form.form input, form.form textarea {
+    font-size: 1em;
+    padding: .5em;
     margin: 10px 0;
-    
-
-}
-form.form input[type="text"]#name {
-    width: 80%;
-}
-form.form input[type="submit"] {
-    background-color: rgb(18, 163, 18);
-    border: solid 4px rgb(10, 116, 10);
-    color: white;
-    border-radius: 5px;
-}
-form.form input[type="submit"]:hover {
-    background-color: rgb(10, 116, 10);
-    border: solid 4px rgb(18, 163, 18);
-    color: white;
-    border-radius: 5px;
-}
-form.form label{
-    font-size: 1.5em;
-}
-form.form textarea {
+    background: none;
+    border: none;
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.8); }
+  form.form input:focus,
+  form.form textarea:focus {
+    box-shadow: 0px 0px 5px 0.5px #f29724; }
+  form.form label {
+    font-size: 1rem; }
+  form.form textarea {
     resize: none;
     width: 80%;
-    height: 6em;
-}
-
-
+    height: 6em; }
+  form.form input[type="text"]#name {
+    width: 80%; }
+  form.form input[type="submit"] {
+    background-color: #f29724;
+    border: none;
+    color: #f7f4f4;
+    border-radius: 5px;
+    padding: .6rem .5rem;
+    font-size: .9rem;
+    transition: all .2s ease-in; }
+    form.form input[type="submit"]:hover {
+      transition-delay: .2s;
+      background-color: #d48320; }
 
 .tasks {
-    width: 100%;
-    padding: 10px;
-}
-.tasks .task {
+  width: 100%;
+  padding: 10px; }
+  .tasks .task {
     width: 100%;
     display: flex;
     padding: 10px;
     justify-content: space-between;
-    align-items: center;
-}
-.tasks .task .body {
-    padding: 5px;
-    width: 90%;
-}
-.tasks .task .body h3.title {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-}
-.tasks .task .body p.description {
-    font-size: 1.1em;
-}
-.tasks .task button.deleteButton {
-    background-color: red;
-    border: solid 4px brown;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 1.1em;
-    display: inline;
-}
+    align-items: center; }
+    .tasks .task .body {
+      padding: 5px;
+      width: 90%; }
+      .tasks .task .body h3.title {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        font-family: Grithani;
+        letter-spacing: .05rem; }
+      .tasks .task .body p.description {
+        font-size: 1em; }
+    .tasks .task button.deleteButton {
+      background-color: #f23c3c;
+      border: none;
+      color: #f7f4f4;
+      border-radius: 5px;
+      padding: .6rem .5rem;
+      font-size: .9rem;
+      transition: all .2s ease-in; }
+      .tasks .task button.deleteButton:hover {
+        transition-delay: .2s;
+        background-color: #d13232; }

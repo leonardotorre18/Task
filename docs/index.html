@@ -8,17 +8,33 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <form action="" class="form" id="form">
-        <label for="name">Nombre:</label>
-        <input type="text" name="name" id="name">
-        <label for="description">Descripción:</label>
-        <textarea name="description" id="description"></textarea>
-        <input type="submit" value="Agregar Tarea">
-    </form>
-    <div class="tasks" id="container">
+    <div id="app">
+        <!-- <header class="header">
+            <nav class="nav">
+                <ul class="list">
+                    <li>Hola</li>
+                    <li>Hola</li>
+                    <li>Hola</li>
+                </ul>
+            </nav>
+        </header> -->
+        <section class="section">
+            <form action="" class="form" id="form">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" autocomplete="off">
+                <label for="description">Descripción:</label>
+                <textarea name="description" id="description"></textarea>
+                <input type="submit" value="Agregar Tarea">
+            </form>
+        </section>
+
+        <div class="tasks" id="container">
+        </div>
     </div>
     
-    <script src="js/DOM.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/DBConnect.js"></script>
+    <script src="js/DBConnectFunctions.js"></script>
+    <script src="js/HandleDOMClass.js"></script>
+    <script src="js/ScriptMain.js"></script>
 </body>
 </html>

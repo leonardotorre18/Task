@@ -1,0 +1,38 @@
+@import './components/mixis';
+
+$background-color: rgb(240, 240, 240);
+$main-color: rgb(242,151,36);
+$main-color-dark: rgb(212, 131, 32);
+$second-color: #f23c3c;
+$second-color-dark: #d13232;
+$white-color: rgb(247, 244, 244);
+$black-color: rgba(0, 0, 0, 0.5);
+$font-color: rgba(0, 0, 0, .8);
+$main-font: Grithani;
+
+@font-face {
+    font-family: Grithani; 
+    src: url('/docs/font/Grithani.otf');
+}
+ 
+*,*::after,*::before {
+    box-sizing: border-box;
+    padding: 0;  
+    margin: 0;
+    font-family: sans-serif;
+}
+html {
+    font-size: 20px;
+}
+body { 
+    background-color: $background-color; 
+    color: $font-color; 
+}
+button, input, textarea {
+    outline: none;
+}
+ 
+
+@import './components/header';  
+@import './components/form'; 
+@import './components/otros'; 

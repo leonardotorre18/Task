@@ -47,3 +47,22 @@ class HandleDOM {
     }
 
 }
+
+
+class Persona{
+    nombre
+    edad
+    soltero
+
+    constructor(nombre, edad, soltero){
+        this.nombre = nombre
+        this.edad = edad
+        this.soltero = soltero
+
+    }
+
+    saludar(saludo){
+        console.log(saludo)
+    }
+}
+
